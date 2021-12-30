@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+.menu {
+    display: flex; 
+    padding: 15px; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 50px; 
+    background-color: white;
+    border-bottom: 1px solid $divider-color;
+    position: sticky;
+
+    .menuitem {
+        margin-top: 10px;
+        cursor: pointer;
+        color: $inactive-color;
+        transition: color 0.25s ease;
+
+        &:hover {
+            color: black;
+        }
+
+        .selected {
+            color: $primary-color;
+        }
+    }
+}
+
