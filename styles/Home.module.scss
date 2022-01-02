@@ -19,6 +19,7 @@
     padding: 100px 200px;
 
     .description {
+      font-weight: 300;
       margin-top: 2rem;
       line-height: 1.5;
       font-size: 1.25rem;
@@ -45,7 +46,7 @@
   }
 
   .howitworks {
-    height: 600px;
+    height: 850px;
     width: 100vw;
     background-image: linear-gradient(#0099ff,#1180ff);
     padding: 0rem 12rem;
@@ -63,6 +64,7 @@
       }
 
       .description {
+        font-weight: 300;
         font-size: 16px;
         color: #ecf0f1;
       }
@@ -86,6 +88,7 @@
       line-height: 1;
     }
     .description {
+      font-weight: 300;
       font-size: 16px;
       color: $inactive-color;
     }
@@ -115,6 +118,7 @@
       line-height: 1;
     }
     .description {
+      font-weight: 300;
       font-size: 16px;
       color: $inactive-color;
     }
