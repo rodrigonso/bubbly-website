@@ -1,4 +1,4 @@
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import Head from 'next/head'
 import Image from 'next/image'
 import NavBar from '../components/NavBar'
@@ -6,24 +6,10 @@ import styles from '../styles/Home.module.scss'
 import image from '../public/test3.png';
 
 import Button from '../components/Button';
+import ServicesList from '../components/ServicesList';
 
 
 export default function Home() {
-  const test = async () => {
-    const db = getFirestore();
-
-    const qsnap = await getDocs(collection(db, "services"));
-    qsnap.forEach((item) => console.log(item.data()));
-  }
-
-
-  const services = [
-    { title: 'Superior Detail', priceSedan: 99, priceNonSedan: 119, duration: 1.5, desc: 'Recommended as weekly routine cleaning to maintain your vehicle clean.' },
-    { title: 'Bubbly Pro', priceSedan: 159, priceNonSedan: 189, duration: 2, desc: 'Includes hand wax, carpet shampoo, leather cleaning & more.' },
-    { title: 'Bubbly Showroom', priceSedan: 259, priceNonSedan: 289, duration: 2.5, desc: "We will bring your vehicle back to it's glory." },
-  ]
-
-  test();
   return (
     <div>
       <NavBar />
@@ -77,28 +63,7 @@ export default function Home() {
               <h2 className={styles.title}>Our services</h2>
               <p className={styles.description}>This is our simple menu. If you want to find out more about each service, click on learn more! We wash every car by hand, ensuring attention to detail and the highest quality service possible.</p>
             </div>
-            <div className={styles.cardsWrapper}>
-              {services.map(service => {
-                return (
-                  <div key={service.title} className={styles.card}>
-                    <div className={styles.left}>
-                      <h2 className={styles.title}>{service.title}</h2>
-                      <p className={styles.description}>{service.desc}</p>
-                      <br />
-                      <br />
-                      <p className={styles.description}>{service.duration} hours</p>
-                      <Button className={styles.learnmorebtn} type="link" title="Learn more" />
-                    </div>
-                    <div className={styles.right}>
-                      <p className={styles.preprice}>Sedans</p>
-                      <h2 className={styles.price}>${service.priceSedan}</h2>
-                      <p className={styles.subprice}>${service.priceNonSedan} for non-sedans.</p>
-                      <Button className={styles.bookbtn} type="link" title="Book &#8594;" style={{ marginTop: 10 }} />
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
+            <ServicesList />
           </div>
         </main>
       </div>
