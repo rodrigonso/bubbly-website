@@ -1,3 +1,4 @@
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import Head from 'next/head'
 import Image from 'next/image'
 import NavBar from '../components/NavBar'
@@ -6,13 +7,23 @@ import image from '../public/test3.png';
 
 import Button from '../components/Button';
 
+
 export default function Home() {
+  const test = async () => {
+    const db = getFirestore();
+
+    const qsnap = await getDocs(collection(db, "services"));
+    qsnap.forEach((item) => console.log(item.data()));
+  }
+
+
   const services = [
     { title: 'Superior Detail', priceSedan: 99, priceNonSedan: 119, duration: 1.5, desc: 'Recommended as weekly routine cleaning to maintain your vehicle clean.' },
     { title: 'Bubbly Pro', priceSedan: 159, priceNonSedan: 189, duration: 2, desc: 'Includes hand wax, carpet shampoo, leather cleaning & more.' },
     { title: 'Bubbly Showroom', priceSedan: 259, priceNonSedan: 289, duration: 2.5, desc: "We will bring your vehicle back to it's glory." },
   ]
 
+  test();
   return (
     <div>
       <NavBar />
@@ -69,7 +80,7 @@ export default function Home() {
             <div className={styles.cardsWrapper}>
               {services.map(service => {
                 return (
-                  <div className={styles.card}>
+                  <div key={service.title} className={styles.card}>
                     <div className={styles.left}>
                       <h2 className={styles.title}>{service.title}</h2>
                       <p className={styles.description}>{service.desc}</p>
