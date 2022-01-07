@@ -12,6 +12,7 @@ import professional_icon from '../public/professional_icon.svg';
 
 import Button from '../components/Button';
 import ServicesList from '../components/ServicesList';
+import UpgradesList from '../components/UpgradesList';
 
 
 export default function Home() {
@@ -112,8 +113,16 @@ export default function Home() {
               <p className={styles.description}>This is our simple menu. If you want to find out more about each service, click on learn more! We wash every car by hand, ensuring attention to detail and the highest quality service possible.</p>
             </div>
             <ServicesList />
+            <UpgradesList />
           </div>
         </main>
+        <footer>
+          <div className={styles.footer}>
+            <p>FAQ</p>
+            <p>Contact Us</p>
+            <p>Book</p>
+          </div>
+        </footer>
       </div>
     </div>
   )
