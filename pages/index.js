@@ -1,4 +1,3 @@
-import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import Head from 'next/head'
 import Image from 'next/image'
 import NavBar from '../components/NavBar'
@@ -7,6 +6,9 @@ import image from '../public/test3.png';
 import step1 from '../public/step1.png';
 import step2 from '../public/step2.png';
 import step3 from '../public/step3.png';
+import convenient_icon from '../public/convenient_icon.svg';
+import trusted_icon from '../public/trusted_icon.svg';
+import professional_icon from '../public/professional_icon.svg';
 
 import Button from '../components/Button';
 import ServicesList from '../components/ServicesList';
@@ -59,7 +61,7 @@ export default function Home() {
                   <p>Our Bubbly van arrives at your home or work with everything to service your vehicle. All we need is your keys!</p>
                 </div>
               </div>
-              <div style={{ marginLeft: '10%', marginTop: '5%', display: 'flex' }}>
+              <div style={{ marginLeft: '8%', marginTop: '7%', display: 'flex' }}>
                 <div>
                   <Image src={step3} width={400} height={400} />
                 </div>
@@ -81,13 +83,26 @@ export default function Home() {
             </div>
             <div className={styles.graphicsWrapper}>
               <div>
-                Schedule anytime
+                <Image src={convenient_icon} width={100} height={100} />
+                <h4>CONVENIENT</h4>
+                <div className={styles.descContainer}>
+                  <p className={styles.description}>We know you have a busy schedule, let us take care of your car.</p>
+                </div>
               </div>
               <div >
-                We come to you
+                <Image src={trusted_icon} width={100} height={100} />
+                <h4>TRUSTED</h4>
+                <div className={styles.descContainer}>
+                  <p className={styles.description}>Fully Secured and Bonded. All Bubbly washes are covered by a $1,000,000 auto liability policy.</p>
+                </div>
               </div>
               <div >
-                Enjoy your car
+                <Image src={professional_icon} width={100} height={100} />
+                <h4>PROFESSIONAL</h4>
+                <div className={styles.descContainer}>
+                  <p className={styles.description}>
+                    Our fully uniformed washers will arrive with water, power, and all the supplies required for your service.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -103,4 +118,5 @@ export default function Home() {
     </div>
   )
 }
+
 

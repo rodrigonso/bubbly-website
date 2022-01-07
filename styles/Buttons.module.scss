@@ -1,6 +1,7 @@
 @import './variables.scss';
 
 .button {
+    background-color: transparent;
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -22,9 +23,8 @@
     }
 
     .secondary {
-        background-color: white;
         padding: 0.75rem 1.25rem;
-        color: $inactive-color;
+        // color: $inactive-color;
         border: 1px $divider-color solid;
         border-radius: 5px;
         transition: box-shadow 0.25s ease;
@@ -60,10 +60,9 @@
     }
 
     .secondary {
-        background-color: white;
         padding: 0.25rem 0.75rem;
-        color: $inactive-color;
-        border: 1px $divider-color solid;
+        // color: $inactive-color;
+        // border: 1px $divider-color solid;
         border-radius: 5px;
     }
 }
@@ -71,4 +70,8 @@
 .buttonlink {
     color: $primary-color;
     font-size: 14px;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

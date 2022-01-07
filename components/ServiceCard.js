@@ -10,13 +10,13 @@ export default function ServiceCard({ service }) {
 				<br />
 				<br />
 				<p className={styles.description}>{service.duration} hours</p>
-				<Button className={styles.learnmorebtn} type="link" title="Learn more" />
+				<Button className={styles.learnmorebtn} type="link" title="Learn more ›" />
 			</div>
 			<div className={styles.right}>
 				<p className={styles.preprice}>Sedans</p>
 				<h2 className={styles.price}>${service.priceSedan}</h2>
 				<p className={styles.subprice}>${service.priceNonSedan} for non-sedans.</p>
-				<Button className={styles.bookbtn} type="link" title="Book &#8594;" style={{ marginTop: 10 }} />
+				<Button className={styles.bookbtn} size="small" type="secondary" title="Book" />
 			</div>
 		</div>
 	)
