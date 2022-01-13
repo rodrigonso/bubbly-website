@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function contact() {
     return (
         <div>
-            <NavBar />
+            <NavBar defaultSelectedKey={3} />
             <div className={styles.container}>
                 <Image src={image} />
                 <div className={styles.formContainer}>
