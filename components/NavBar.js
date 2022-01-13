@@ -8,8 +8,8 @@ export default function NavBar({ defaultSelectedKey = 0 }) {
     const [selectedIdx, setSelectedIdx] = useState(defaultSelectedKey);
     const menuItems = [
         { title: 'Home', path: '/' },
-        { title: 'Why bubbly', path: '/why-bubbly' },
-        { title: 'Services', path: '/services' },
+        { title: 'Why bubbly', path: '#why-bubbly' },
+        { title: 'Services', path: '#services' },
         { title: 'Contact', path: '/contact' }
     ];
 
