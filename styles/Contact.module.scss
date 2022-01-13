@@ -1,0 +1,11 @@
+@import './variables.scss';
+
+
+.container {
+    display: flex;
+}
+
+.formContainer {
+    padding: 2rem;
+    background-color: $primary-color;
+}

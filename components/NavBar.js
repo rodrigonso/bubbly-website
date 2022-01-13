@@ -4,8 +4,8 @@ import styles from '../styles/NavBar.module.scss';
 import Router from 'next/router';
 import { useState } from "react";
 
-export default function NavBar() {
-    const [selectedIdx, setSelectedIdx] = useState(0);
+export default function NavBar({ defaultSelectedKey = 0 }) {
+    const [selectedIdx, setSelectedIdx] = useState(defaultSelectedKey);
     const menuItems = [
         { title: 'Home', path: '/' },
         { title: 'Why bubbly', path: '/why-bubbly' },
