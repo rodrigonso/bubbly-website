@@ -61,6 +61,7 @@
       .title {
         font-size: 32px;
         line-height: 1;
+        color: white;
       }
 
       .description {
@@ -112,7 +113,7 @@
 
 .ourservices {
   margin-top: 200px;
-  padding: 2rem 2rem;
+  padding: 2rem;
   width: 100vw;
   height: 800px;
   display: flex;
@@ -124,6 +125,7 @@
   .textWrapper {
     width: 800px;
     margin-bottom: 40px;
+
     .title {
       font-size: 32px;
       line-height: 1;
@@ -136,21 +138,27 @@
   }
 }
 
-.footer {
+.ourupgrades {
+  padding: 2rem;
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
   align-items: center;
-  background-color: #fafafa;
-}
+  flex-direction: column;
+  text-align: center;
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  .textWrapper {
+    width: 800px;
+    margin-bottom: 40px;
+    .title {
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .description {
+      font-weight: 300;
+      font-size: 16px;
+      color: $inactive-color;
+    }
+  }
 }
 
 .code {

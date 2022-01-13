@@ -1,0 +1,36 @@
+@import './variables.scss';
+
+
+.container {
+    display: flex;
+}
+
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 250px;
+    height: 275px;
+    margin: 0.5rem;
+    background-color: #e5e5e533;
+    box-shadow: 0.5px 2.5px 2.5px 0 rgba(0, 0, 0, 0.05);
+
+    .textWrapper {
+        width: 175px;
+
+        .description {
+            font-weight: 300;
+            font-size: 14px;
+            color: $inactive-color;
+        }
+
+        .price {
+            margin-top: 2rem;
+            font-size: 16px;
+        }
+    }
+}

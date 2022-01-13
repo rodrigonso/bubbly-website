@@ -8,8 +8,8 @@ export default function NavBar() {
     const [selectedIdx, setSelectedIdx] = useState(0);
     const menuItems = [
         { title: 'Home', path: '/' },
-        { title: 'Why bubbly', path: '/why-bubbly' },
-        { title: 'Services', path: '/services' },
+        { title: 'Why bubbly', path: '#why-bubbly' },
+        { title: 'Services', path: '#services' },
         { title: 'Contact', path: '/contact' }
     ];
 
