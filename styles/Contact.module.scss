@@ -3,9 +3,11 @@
 
 .container {
     display: flex;
+    padding: 2rem;
 }
 
 .formContainer {
     padding: 2rem;
     background-color: $primary-color;
+    width: 100vw;
 }
